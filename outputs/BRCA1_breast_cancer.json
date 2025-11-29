@@ -1,0 +1,33 @@
+{
+  "gene": "BRCA1",
+  "disease": "breast cancer",
+  "hypothesis": "Gene: BRCA1 Disease: breast cancer Context: To illustrate the integration of both programs, we describe the redocking simulation focused the cyclin-dependent kinase 2 in complex with a competitive inhibitor. QTL analysis was performed by using the WinQTL Cartographer 2.5 V. A total of 21 QTLs were detected using composite interval mapping. The QTLs relating to drought tolerance at the vegetative stage were found on chromosome 1. Novel genomic regions were detected in the marker interval RM520-RM143 and RM168-RM520. Molegro Virtual Docker is a protein-ligand docking simulation program that allows us to carry out docking simulations in a fully integrated computational package. MVD has been successfully applied to hundreds of different proteins, with docking performance similar to other docking programs such as AutoDock4 and AutoDock Vina. The program MVD has four search algorithms and four native scoring functions. Therefore, there is always a quest to find the new QTLs. The present investigation was carried out to map QTLs involved in drought resistance and yield related parameter in a cross of IR55419-04 and Super Basmati. An F2 population of 418 individuals was used as the mapping population. individuals were selected based on total water uptake under water stress conditions. Two hundred thirty microsatellite markers staggered on the whole genome were used for identifying polymorphic markers between the two parents. The selected 73 polymorphic microsatellites were used to genotype individuals and were scattered on a distance of 1735 cM on all 12 linkage groups. Hypothesis: The QTL analysis was carried out using QTL Cartographer 2.5. The QTL analysis was performed using the QTL Cartographer 2.5. The QTL Cartographer 2.5 was used to carry out docking simulations in a fully integrated computational package MVD.",
+  "novelty_score": 1.0,
+  "evidence": [
+    {
+      "score": 0.1558813452720642,
+      "idx": 10,
+      "text": "To illustrate the integration of both programs, we describe the redocking simulation focused the cyclin-dependent kinase 2 in complex with a competitive inhibitor."
+    },
+    {
+      "score": 0.08401549607515335,
+      "idx": 5,
+      "text": "QTL analysis was performed by using the WinQTL Cartographer 2.5 V. A total of 21 QTLs were detected using composite interval mapping. The QTLs relating to drought tolerance at the vegetative stage were found on chromosome 1. Novel genomic regions were detected in the marker interval RM520-RM143 and RM168-RM520."
+    },
+    {
+      "score": 0.08213309198617935,
+      "idx": 8,
+      "text": "Molegro Virtual Docker is a protein-ligand docking simulation program that allows us to carry out docking simulations in a fully integrated computational package. MVD has been successfully applied to hundreds of different proteins, with docking performance similar to other docking programs such as AutoDock4 and AutoDock Vina. The program MVD has four search algorithms and four native scoring functions."
+    },
+    {
+      "score": 0.06140003353357315,
+      "idx": 2,
+      "text": "Therefore, there is always a quest to find the new QTLs. The present investigation was carried out to map QTLs involved in drought resistance and yield related parameter in a cross of IR55419-04 and Super Basmati. An F2 population of 418 individuals was used as the mapping population."
+    },
+    {
+      "score": 0.058152586221694946,
+      "idx": 4,
+      "text": "individuals were selected based on total water uptake under water stress conditions. Two hundred thirty microsatellite markers staggered on the whole genome were used for identifying polymorphic markers between the two parents. The selected 73 polymorphic microsatellites were used to genotype individuals and were scattered on a distance of 1735 cM on all 12 linkage groups."
+    }
+  ]
+}
