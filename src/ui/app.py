@@ -116,7 +116,7 @@ st.markdown("""
         border-radius: 12px;
         border-left: 5px solid #1A8FE3;
         margin-bottom: 12px;
-        color: #E4F1FE;
+        color: black;
         font-size: 16px;
     }
 
@@ -136,6 +136,34 @@ st.markdown("""
         background: linear-gradient(90deg, #1A8FE3, #005C99);
         box-shadow: 0 6px 14px rgba(0,0,0,0.3);
     }
+            
+    .light-label {
+    color: #E4F1FE !important;
+    font-size: 24px;
+    font-weight: 700;
+    }
+            
+    /* Widget labels: text_input, selectbox, radio, etc. */
+    .stTextInput label,
+    .stSelectbox label,
+    .stRadio label,
+    .stTextArea label {
+        color: #E4F1FE !important;    /* Light color */
+        font-weight: 600 !important;
+    }
+
+    /* Radio button labels specifically */
+    div[role="radiogroup"] > label {
+        color: #E4F1FE !important;
+        font-weight: 600 !important;
+    }
+
+    /* Fix the text in front of each radio button */
+    div[role="radiogroup"] p {
+        color: #E4F1FE !important;
+        font-weight: 700 !important;
+    }
+
 
 </style>
 """, unsafe_allow_html=True)
@@ -208,14 +236,18 @@ if st.button("Generate Hypothesis"):
 
         st.success("Hypothesis successfully generated.")
 
-        st.markdown("#### Generated Hypothesis")
+        # st.markdown("#### Generated Hypothesis")
+        st.markdown('<p class="light-label">Generated Hypothesis</p>', unsafe_allow_html=True)
+
         st.markdown(f'<div class="text-card">{hypothesis_text}</div>', unsafe_allow_html=True)
 
-        st.markdown("#### Evidence Passages")
+        # st.markdown("#### Evidence Passages")
+        st.markdown('<p class="light-label">Evidence Passages</p>', unsafe_allow_html=True)
         for txt in evidence_texts:
             st.markdown(f'<div class="text-card">{txt}</div>', unsafe_allow_html=True)
 
-        st.markdown("#### Novelty Score")
+        # st.markdown("#### Novelty Score")
+        st.markdown('<p class="light-label">Novelty Score</p>', unsafe_allow_html=True)
         st.markdown(f'<div class="text-card">{nscore:.2f}</div>', unsafe_allow_html=True)
 
 st.markdown('</div>', unsafe_allow_html=True)
@@ -244,15 +276,18 @@ if not results.empty:
     selected = st.selectbox("Select Hypothesis ID", results["hypothesis_id"].astype(str))
     row = df[df["hypothesis_id"].astype(str) == selected].iloc[0]
 
-    st.markdown("#### Hypothesis")
+    st.markdown('<div class="section-title" style="color: #E4F1FE;">Hypothesis</div>',
+    unsafe_allow_html=True)
     st.markdown(f'<div class="text-card">{row["hypothesis_text"]}</div>', unsafe_allow_html=True)
 
-    st.markdown("#### Evidence Passages")
+    st.markdown('<div class="section-title" style="color: #E4F1FE;">Evidence Passages</div>',
+    unsafe_allow_html=True)
     evid = json.loads(row["evidence_passages"])
     for e in evid:
         st.markdown(f'<div class="text-card">{e}</div>', unsafe_allow_html=True)
 
-    st.markdown("#### Novelty Score")
+    st.markdown('<div class="section-title" style="color: #E4F1FE;">Novelty Score</div>',
+    unsafe_allow_html=True)
     st.markdown(f'<div class="text-card">{row["novelty_score"]}</div>', unsafe_allow_html=True)
 
 st.markdown('</div>', unsafe_allow_html=True)
